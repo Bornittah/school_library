@@ -1,12 +1,25 @@
-class Person:
-  def __init__(self, name, age):
-      self.name = name
-      self.age = age
+class Person
+  attr_reader :name, :age
 
-class Student(Person):
-  def __init__(self, name, age, classroom):
-      super().__init__(name, age)
-      self.classroom = classroom
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
 
-  def play_hooky(self):
-      return "¯\(ツ)/¯"
+  def can_use_services?
+    @age >= 18
+  end
+end
+
+class Student < Person
+  attr_reader :classroom
+
+  def initialize(name, age, classroom)
+    super(name, age)
+    @classroom = classroom
+  end
+
+  def play_hooky
+    "¯\\(ツ)/¯"
+  end
+end

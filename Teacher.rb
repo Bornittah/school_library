@@ -1,15 +1,25 @@
-class Person:
-  def __init__(self, name, age):
-      self.name = name
-      self.age = age
+class Person
+  attr_reader :name, :age
 
-  def can_use_services(self):
-      return self.age >= 18
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
 
-class Teacher(Person):
-  def __init__(self, name, age, specialization):
-      super().__init__(name, age)
-      self.specialization = specialization
+  def can_use_services?
+    @age >= 18
+  end
+end
 
-  def can_use_services(self):
-      return True
+class Teacher < Person
+  attr_reader :specialization
+
+  def initialize(name, age, specialization)
+    super(name, age)
+    @specialization = specialization
+  end
+
+  def can_use_services?
+    true
+  end
+end
