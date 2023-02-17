@@ -1,4 +1,4 @@
-class Person
+class Person< Nameable
   attr_accessor :name, :age
   attr_reader :id
 
@@ -10,12 +10,21 @@ class Person
   end
 
   def can_use_services?
-    of_age? || @parent_permission
+    return true if of_age? || @parent_permission
+
+    false
   end
 
   private
 
   def of_age?
-    @age >= 18
+    return true if @age >= 18
+
+    false
   end
+  def correct_name
+    @name
+  end
+
+  private :of_age?
 end
