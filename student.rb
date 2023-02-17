@@ -1,15 +1,4 @@
-class Person
-  attr_reader :name, :age
-
-  def initialize(name, age)
-    @name = name
-    @age = age
-  end
-
-  def can_use_services?
-    @age >= 18
-  end
-end
+require_relative 'person'
 
 class Student < Person
   attr_reader :classroom
