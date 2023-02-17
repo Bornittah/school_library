@@ -1,4 +1,9 @@
-class Person< Nameable
+require_relative 'nameable'
+require_relative 'capitalize'
+require_relative 'trimmer'
+require_relative 'base_decorator'
+
+class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id
 
@@ -7,6 +12,7 @@ class Person< Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    super
   end
 
   def can_use_services?
@@ -22,6 +28,7 @@ class Person< Nameable
 
     false
   end
+
   def correct_name
     @name
   end
