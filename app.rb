@@ -54,7 +54,7 @@ class App
     parent_permission = gets.chomp.downcase
     case parent_permission
     when 'n'
-      student = Student.new(age: age, classroom: nil, name: name, parent_permission: false)
+      student = Student.new(age, classroom: nil, name: name, parent_permission: false)
       @people.push(student)
       puts 'Awesome! Student created successfully'
     when 'y'
