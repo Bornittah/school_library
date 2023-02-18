@@ -51,8 +51,7 @@ A  tool to record what books are in the library and who borrows them
 
 ### Key Features <a name="key-features"></a>
 
-- **Create class Person with instance variables, constructor, getters, setters, public and private methods.**
-- **Create classes Student and Teacher which inherit fron Class Person**
+- **Create a form of UI for your school library app**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +125,7 @@ No deployment
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Decorate classes**
+- [ ] **DCreate more entry points for the app**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
