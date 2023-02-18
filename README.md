@@ -125,7 +125,7 @@ No deployment
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **DCreate more entry points for the app**
+- [ ] **Create more entry points for the app**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
