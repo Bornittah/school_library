@@ -5,37 +5,33 @@ require_relative 'base_decorator'
 require_relative 'rental'
 
 class Person < Nameable
-  attr_accessor :name, :age
-  attr_reader :id, :rentals
+  attr_accessor :name, :age, :rentals, :parent_permission
+  attr_reader :id
 
-  def initialize(age:, name: 'Unkown', parent_permission: true)
+  def initialize(age, parent_permission: true, name: 'Unknown', id: Random.rand(1..1000))
     super()
-    @id = Random.rand(1..1000)
+    @id = id
     @name = name
-    @parent_permission = parent_permission
     @age = age
+    @parent_permission = parent_permission
     @rentals = []
   end
 
-  def of_age?
-    return true if @age >= 18
-
-    false
+  def add_rental(date, book)
+    Rental.new(date, book, self)
   end
 
-  def can_use_services
-    return true if of_age? || @parent_permission
-
-    false
+  def can_use_services?
+    is_of_age? || @parent_permission
   end
 
   def correct_name
     @name
   end
 
-  def add_rental(book, date)
-    Rental.new(date, book, self)
-  end
+  private
 
-  private :of_age?
+  def is_of_age? 
+    @age >= 18
+  end
 end
