@@ -117,6 +117,11 @@ No deployment
 - Twitter: [@AgashaBornittah](https://twitter.com/AgashaBornittah)
 - LinkedIn: [Bornittah](www.linkedin.com/in/agasha-bornittah)
 
+👤 **Ayesha Arshad**
+
+- GitHub: [@shella12](https://github.com/shella12)
+- Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
+- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
