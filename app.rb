@@ -106,9 +106,6 @@ class App
   end
 
   def list_rentals
-    puts
-    person_id = get_input('ID of person: ')
-    person = get_person(person_id)
     puts 'Rentals:'
     @rentals.each do |rental|
       puts "Date: #{rental.date} Book: #{rental.book.title} by #{rental.book.author}"
